@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DC54B9ED2647D6BE008D3010 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54B9EC2647D6BE008D3010 /* AppDelegate.swift */; };
+		DC54B9EF2647D6BE008D3010 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DC54B9EE2647D6BE008D3010 /* GameScene.sks */; };
+		DC54B9F12647D6BE008D3010 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DC54B9F02647D6BE008D3010 /* Actions.sks */; };
+		DC54B9F32647D6BE008D3010 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54B9F22647D6BE008D3010 /* GameScene.swift */; };
+		DC54B9F52647D6BE008D3010 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC54B9F42647D6BE008D3010 /* GameViewController.swift */; };
+		DC54B9F82647D6BE008D3010 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC54B9F62647D6BE008D3010 /* Main.storyboard */; };
+		DC54BA032647D79D008D3010 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = DC54BA022647D79D008D3010 /* player.png */; };
+		DC54BA052647D7A5008D3010 /* tanah.png in Resources */ = {isa = PBXBuildFile; fileRef = DC54BA042647D7A5008D3010 /* tanah.png */; };
+		DC54BA0726481CA2008D3010 /* obstacle.png in Resources */ = {isa = PBXBuildFile; fileRef = DC54BA0626481CA2008D3010 /* obstacle.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DC54B9E92647D6BE008D3010 /* Dino Jump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dino Jump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC54B9EC2647D6BE008D3010 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC54B9EE2647D6BE008D3010 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		DC54B9F02647D6BE008D3010 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		DC54B9F22647D6BE008D3010 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		DC54B9F42647D6BE008D3010 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		DC54B9F72647D6BE008D3010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DC54B9FB2647D6BF008D3010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC54BA022647D79D008D3010 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		DC54BA042647D7A5008D3010 /* tanah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tanah.png; sourceTree = "<group>"; };
+		DC54BA0626481CA2008D3010 /* obstacle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obstacle.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DC54B9E62647D6BE008D3010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC54B9E02647D6BE008D3010 = {
+			isa = PBXGroup;
+			children = (
+				DC54B9EB2647D6BE008D3010 /* Dino Jump */,
+				DC54B9EA2647D6BE008D3010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DC54B9EA2647D6BE008D3010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC54B9E92647D6BE008D3010 /* Dino Jump.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DC54B9EB2647D6BE008D3010 /* Dino Jump */ = {
+			isa = PBXGroup;
+			children = (
+				DC54BA012647D78F008D3010 /* Assets */,
+				DC54B9EC2647D6BE008D3010 /* AppDelegate.swift */,
+				DC54B9EE2647D6BE008D3010 /* GameScene.sks */,
+				DC54B9F02647D6BE008D3010 /* Actions.sks */,
+				DC54B9F22647D6BE008D3010 /* GameScene.swift */,
+				DC54B9F42647D6BE008D3010 /* GameViewController.swift */,
+				DC54B9F62647D6BE008D3010 /* Main.storyboard */,
+				DC54B9FB2647D6BF008D3010 /* Info.plist */,
+			);
+			path = "Dino Jump";
+			sourceTree = "<group>";
+		};
+		DC54BA012647D78F008D3010 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DC54BA0626481CA2008D3010 /* obstacle.png */,
+				DC54BA042647D7A5008D3010 /* tanah.png */,
+				DC54BA022647D79D008D3010 /* player.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DC54B9E82647D6BE008D3010 /* Dino Jump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC54B9FE2647D6BF008D3010 /* Build configuration list for PBXNativeTarget "Dino Jump" */;
+			buildPhases = (
+				DC54B9E52647D6BE008D3010 /* Sources */,
+				DC54B9E62647D6BE008D3010 /* Frameworks */,
+				DC54B9E72647D6BE008D3010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dino Jump";
+			productName = "Dino Jump";
+			productReference = DC54B9E92647D6BE008D3010 /* Dino Jump.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DC54B9E12647D6BE008D3010 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					DC54B9E82647D6BE008D3010 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = DC54B9E42647D6BE008D3010 /* Build configuration list for PBXProject "Dino Jump" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DC54B9E02647D6BE008D3010;
+			productRefGroup = DC54B9EA2647D6BE008D3010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DC54B9E82647D6BE008D3010 /* Dino Jump */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DC54B9E72647D6BE008D3010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC54BA0726481CA2008D3010 /* obstacle.png in Resources */,
+				DC54B9F82647D6BE008D3010 /* Main.storyboard in Resources */,
+				DC54BA032647D79D008D3010 /* player.png in Resources */,
+				DC54BA052647D7A5008D3010 /* tanah.png in Resources */,
+				DC54B9EF2647D6BE008D3010 /* GameScene.sks in Resources */,
+				DC54B9F12647D6BE008D3010 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DC54B9E52647D6BE008D3010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC54B9F32647D6BE008D3010 /* GameScene.swift in Sources */,
+				DC54B9F52647D6BE008D3010 /* GameViewController.swift in Sources */,
+				DC54B9ED2647D6BE008D3010 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DC54B9F62647D6BE008D3010 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC54B9F72647D6BE008D3010 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DC54B9FC2647D6BF008D3010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DC54B9FD2647D6BF008D3010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DC54B9FF2647D6BF008D3010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HG5NBT3VSY;
+				INFOPLIST_FILE = "Dino Jump/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AppleDeveloperAcademy.Dino-Jump";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DC54BA002647D6BF008D3010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HG5NBT3VSY;
+				INFOPLIST_FILE = "Dino Jump/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AppleDeveloperAcademy.Dino-Jump";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DC54B9E42647D6BE008D3010 /* Build configuration list for PBXProject "Dino Jump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC54B9FC2647D6BF008D3010 /* Debug */,
+				DC54B9FD2647D6BF008D3010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC54B9FE2647D6BF008D3010 /* Build configuration list for PBXNativeTarget "Dino Jump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC54B9FF2647D6BF008D3010 /* Debug */,
+				DC54BA002647D6BF008D3010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DC54B9E12647D6BE008D3010 /* Project object */;
+}
