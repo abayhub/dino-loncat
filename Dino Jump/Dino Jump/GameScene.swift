@@ -10,18 +10,24 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    var player:SKSpriteNode?
-    var ground:SKSpriteNode?
+    var player:SKSpriteNode!
+    var ground:SKSpriteNode!
     var actualDuration:CGFloat = 7.0
-    var obstacle:SKSpriteNode?
+    var obstacle: [SKSpriteNode]! = []
+    var gameOverLabel : SKLabelNode!
+    var tapAnywhareToReset : SKLabelNode!
+    var isGameOver : Bool = false
     
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.white
         player = (childNode(withName: "player") as! SKSpriteNode)
         ground = (childNode(withName: "ground") as! SKSpriteNode)
-       
+        setupGameOverLabel()
+        
+       addObstacle()
         run(SKAction.repeatForever(SKAction.sequence([SKAction.run(addObstacle), SKAction.wait(forDuration: 1.75)])))
         run(SKAction.stop())
+ 
     }
     
     
@@ -38,11 +44,49 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if player?.physicsBody?.velocity.dy == 0 {
-            jump()
+        if !isGameOver{
+            if player?.physicsBody?.velocity.dy == 0 {
+                jump()
+            }
         }
+        
+        
+        if(isGameOver){
+            resumeGame()
+        }
+        
+        
     }
-    
+    func resumeGame(){
+        player.isPaused = false
+        gameOverLabel.isHidden = true
+        tapAnywhareToReset.isHidden = true
+        isGameOver = false
+        resetGame()
+    }
+    func setupGameOverLabel(){
+        gameOverLabel = SKLabelNode(fontNamed: "SanFranciscoDisplay-Regular")
+        gameOverLabel.position = CGPoint(x: frame.midX, y: frame.midY)
+        gameOverLabel.fontSize = 40
+        gameOverLabel.text = "Game Over"
+        gameOverLabel.fontColor = .black
+        gameOverLabel.isHidden = true
+        addChild(gameOverLabel)
+        // setup Tap Anywhere
+        tapAnywhareToReset = SKLabelNode(fontNamed: "SanFranciscoDisplay-Regular")
+        tapAnywhareToReset.position = CGPoint(x: frame.midX, y: frame.midY-60)
+        tapAnywhareToReset.fontSize = 30
+        tapAnywhareToReset.text = "Tap Anywhare to Restart"
+        tapAnywhareToReset.fontColor = .black
+        tapAnywhareToReset.isHidden = true
+        addChild(tapAnywhareToReset)
+    }
+    func resetGame(){
+        for obs in obstacle{
+            obs.removeFromParent()
+        }
+        obstacle = []
+    }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     
     }
@@ -58,14 +102,15 @@ class GameScene: SKScene {
     func jump() {
         player?.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 30))
     }
-    
+    var tempObstacle : SKSpriteNode?
     func addObstacle() {
-        obstacle = SKSpriteNode(texture: SKTexture(image: #imageLiteral(resourceName: "obstacle.png")))
+        tempObstacle = SKSpriteNode(texture: SKTexture(image: #imageLiteral(resourceName: "obstacle.png")))
         
-        if let obstacleUnwrap = obstacle {
+        
+        if let obstacleUnwrap = tempObstacle {
             
             obstacleUnwrap.position = CGPoint(x: size.width, y: -97)
-            
+            obstacle.append(obstacleUnwrap)
             addChild(obstacleUnwrap)
         }
         
@@ -79,7 +124,7 @@ class GameScene: SKScene {
         
         let actualMoveDone = SKAction.removeFromParent()
         
-        if let obstacleUnwrap = obstacle {
+        if let obstacleUnwrap = tempObstacle {
             obstacleUnwrap.run(SKAction.sequence([actualMove, actualMoveDone]))
         }
         
@@ -87,10 +132,24 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
-        if let playerUnwrap = player, let obstacleUnwrap = obstacle {
-            if playerUnwrap.intersects(obstacleUnwrap) {
-                print("intersect")
+        for obs in obstacle{
+            if let playerUnwrap = player, let obstacleUnwrap = obs as? SKSpriteNode {
+                if playerUnwrap.intersects(obstacleUnwrap) {
+                    pauseGame()
+                }
             }
         }
+        
+        
     }
+    func pauseGame(){
+        player.isPaused = true
+        isGameOver = true
+        for obs in obstacle{
+            obs.isPaused = true;
+        }
+        gameOverLabel.isHidden = false
+        tapAnywhareToReset.isHidden = false
+    }
+
 }
